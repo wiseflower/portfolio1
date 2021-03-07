@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Curtain Layer Menu 스타일 */
+.container section:nth-child(1){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #111;
+}
+
+h2.menu_title{
+    color:rgba(255,255,255,0.1);
+    font-size: 8vw;
+}
+
+.toggle {
+    position:fixed;
+    top: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    background: #fff url(./img/menu.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.toggle.active {
+    background: #fff url(./img/close.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    z-index: 10000;
+}
+
+.curtain {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    z-index: 100;
+}
+
+.curtain.active {
+    visibility: visible;
+}
+
+.curtain span {
+    position:absolute;
+    top: -100%;
+    left: calc(25% * var(--i));
+    width: 25%;
+    height: 100%;
+    background: #37474f;
+    transition: all 0.25s;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    transition-delay: calc(0.25s * var(--i));
+}
+
+.curtain.active span{
+    top:0;
+}
+
+.curtain ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+    transform: translateX(-100px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+
+.curtain.active ul{
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.75s;
+}
+
+.curtain ul li {
+    list-style: none;
+}
+
+.curtain ul li a{
+    text-decoration: none;
+    font-size: 3em;
+    font-weight: 700;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 20px;
+    transition: 0.5s ease-in-out;
+}
+
+.curtain ul li a:hover {
+    background:#fff;
+    color: #37474f;
+}
+
+
+
+/*전체 섹션 영역을 정의해주는 스타일*/
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+}
+
+/*각 섹션별 영역 정의*/
+.container section{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: start;
+    background-blend-mode: multiply;
+}
+
+/*섹션별 배경, 이미지, 컬러 지정*/
+.container section:nth-child(1){
+    background: #62727b url(./img/bg1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container section:nth-child(2){
+    background: #0f0 url(./img/bg2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container section:nth-child(3){
+    background: #ff0 url(./img/bg3.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container section:nth-child(4){
+    background: #0ff url(./img/bg4.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container section:nth-child(5){
+    background: #00f url(./img/bg5.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*텍스트 영역 잡아주기*/
+.container section .content {
+    position: absolute;
+    width: 700px;
+    bottom: 50px;
+    left: 50px;
+}
+
+.container section .content h2 {
+    background: #fff;
+    color:#111;
+    font-weight: 600;
+    display: inline-block;
+    padding: 10px 20px; 
+    font-size: 2em;
+}
+
+.container section .content p {
+    background: #fff;
+    color:#111;
+    font-weight: 300;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+
+/* 미디어쿼리 */
+@media (max-width: 767px){
+    .curtain ul li a{
+        font-size: 2em;
+    }
+}
