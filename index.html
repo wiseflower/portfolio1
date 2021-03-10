@@ -7,10 +7,12 @@
     
     <!-- page-icon -->
     <link rel="shortcut icon" href="img/title_icon.png">
-
-    <!-- stylesheet -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    
     <link rel="stylesheet" href="./main.css">
-    <title>Document</title>
+
+
+    <title>Portfolio</title>
 </head>
 <body>
     
@@ -23,33 +25,55 @@
 
         <!-- Layout -->
         <section>
-            <!-- box slider -->
-            <div class="box">
-                <!-- img-box -->
-                <div class="slide-img">
-                    <img src="./img/slid1.jpg" alt="">
-                    <!-- overlayer -->
-                    <div class="overlay">
-                        <!-- button -->
-                        <a href="#" class="view-more-btn">View More</a>
+
+            <div class="testimonials">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="layer"></div>
+                                <div class="content">
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia ex fuga sint molestiae quia incidunt laboriosam? Quidem corrupti ducimus obcaecati quia</p>
+                                </div>
+                                <div class="imgBx">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="details">
+                                    <h2>Some Famous <br> <span>Website Designer</span> Designer</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="layer"></div>
+                                <div class="content">
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia ex fuga sint molestiae quia incidunt laboriosam? Quidem corrupti ducimus obcaecati quia</p>
+                                </div>
+                                <div class="imgBx">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="details">
+                                    <h2>Some Famous <br> <span>Website Designer</span> Designer</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="layer"></div>
+                                <div class="content">
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia ex fuga sint molestiae quia incidunt laboriosam? Quidem corrupti ducimus obcaecati quia</p>
+                                </div>
+                                <div class="imgBx">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="details">
+                                    <h2>Some Famous <br> <span>Website Designer</span> Designer</h2>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- detail-box -->
-                <div class="detail-box">
-
-                    <!-- type -->
-                    <div class="type">
-                        <a href="#">Cardigan</a>
-                        <span>No Arrival!</span>
-                        
-                    </div>
-                    <!-- price -->
-                    <a href="#" class="price">23</a>
-                </div>
-
-                
-            </div>
-            
+            </div>         
 
             <!-- Layout -->
             <div class="content">              
@@ -73,7 +97,7 @@
             <div class="content">
                 <h2>Section Four Title</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste eveniet accusamus nihil nostrum debitis eum cupiditate. Exercitationem est quaerat blanditiis ad molestiae nam, officia ipsam quod explicabo iusto, quasi pariatur?</p>
-            </div>ㄴ
+            </div>
         </section>
         <section>
             <div class="content">
@@ -100,5 +124,22 @@
     </div>
 
     <script src="main.js"></script>
+    <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            loop: true,
+        });
+        </script>
 </body>
 </html>
