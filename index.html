@@ -8,7 +8,8 @@
     <!-- page-icon -->
     <link rel="shortcut icon" href="img/title_icon.png">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    
+    <link rel="stylesheet" href="../package/swiper-bundle.min.css">
+
     <link rel="stylesheet" href="./main.css">
 
 
@@ -31,46 +32,61 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="card">
-                                <div class="layer"></div>
-                                <div class="content">
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia ex fuga sint molestiae quia incidunt laboriosam? Quidem corrupti ducimus obcaecati quia</p>
-                                </div>
-                                <div class="imgBx">
-                                    <img src="" alt="">
-                                </div>
-                                <div class="details">
-                                    <h2>Some Famous <br> <span>Website Designer</span> Designer</h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <div class="layer"></div>
-                                <div class="content">
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia ex fuga sint molestiae quia incidunt laboriosam? Quidem corrupti ducimus obcaecati quia</p>
-                                </div>
-                                <div class="imgBx">
-                                    <img src="" alt="">
-                                </div>
-                                <div class="details">
-                                    <h2>Some Famous <br> <span>Website Designer</span> Designer</h2>
+                                <div class="card-layer"></div>
+                                <div class="card-content">
+                                    <p class="card-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit.  </p>
+                                    <div class="imgBx">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="card-details">
+                                        <h2>Some Famous <br> <span>Website Designer</span></h2>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <div class="layer"></div>
-                                <div class="content">
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia ex fuga sint molestiae quia incidunt laboriosam? Quidem corrupti ducimus obcaecati quia</p>
-                                </div>
-                                <div class="imgBx">
-                                    <img src="" alt="">
-                                </div>
-                                <div class="details">
-                                    <h2>Some Famous <br> <span>Website Designer</span> Designer</h2>
+                                <div class="card-layer"></div>
+                                <div class="card-content">
+                                    <p class="card-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit.  </p>
+                                    <div class="imgBx">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="card-details">
+                                        <h2>Some Famous <br> <span>Website Designer</span></h2>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="card-layer"></div>
+                                <div class="card-content">
+                                    <p class="card-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit.  </p>
+                                    <div class="imgBx">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="card-details">
+                                        <h2>Some Famous <br> <span>Website Designer</span></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="card-layer"></div>
+                                <div class="card-content">
+                                    <p class="card-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit.  </p>
+                                    <div class="imgBx">
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="card-details">
+                                        <h2>Some Famous <br> <span>Website Designer</span></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
             </div>         
@@ -124,7 +140,9 @@
     </div>
 
     <script src="main.js"></script>
-    <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="../package/swiper-bundle.min.js"></script>
+
     <script>
         var swiper = new Swiper('.swiper-container', {
             effect: 'coverflow',
@@ -132,14 +150,13 @@
             centeredSlides: true,
             slidesPerView: 'auto',
             coverflowEffect: {
-                rotate: 50,
+                rotate: 0,
                 stretch: 0,
-                depth: 100,
+                depth: 0,
                 modifier: 1,
                 slideShadows: true,
-            },
-            loop: true,
+            }
         });
         </script>
 </body>
-</html>
+</html> 
